@@ -1,7 +1,7 @@
 Description=multizone-prometheus daemon service
 [Service]
 # ExecStart=/usr/lib/jvm/java-11-openjdk-armhf/bin/java -jar /multizone-prometheus/multizone-prometheus.jar 1 9600 /dev/serial1 deepfoods
-ExecStart="/usr/lib/jvm/java-11-openjdk-armhf/bin/java -jar /multizone-prometheus/multizone-prometheus.jar {ADDRESS} {BAUD} {SERIAL_PORT} {CUSTOMER_NAME}"
+ExecStart=/usr/lib/jvm/java-11-openjdk-armhf/bin/java -jar /multizone-prometheus/multizone-prometheus.jar {ADDRESS} {BAUD} {SERIAL_PORT} {CUSTOMER_NAME}
 StandardOutput=syslog
 StandardError=syslog
 #Don't need "sudo" if we run as root
